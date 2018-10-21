@@ -11,13 +11,29 @@ var FindProxyForURL = function(init, profiles) {
 }("+auto switch", {
     "+auto switch": function(url, host, scheme) {
         "use strict";
-        if (/(?:^|\.)googleusercontent\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)google-analytics\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)google\.com\.au$/.test(host)) return "+proxy";
+        if (/(?:^|\.)kapeli\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)cleverbridge\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)gstatic\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)nginx\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)yahoo\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)whatsapp\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)whatsapp\.net$/.test(host)) return "+proxy";
+        if (/(?:^|\.)telesco\.pe$/.test(host)) return "+proxy";
+        if (/(?:^|\.)t\.me$/.test(host)) return "+proxy";
+        if (/(?:^|\.)tdesktop\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)rawgit\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)blogblog\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)blogger\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)bp\.blogspot\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)smandyscom\.blogspot\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)duckduckgo\.com$/.test(host)) return "+proxy";
+        if (/(?:^|\.)googleusercontent\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)google\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)telegram\.org$/.test(host)) return "+proxy";
         if (/(?:^|\.)melvinvivas\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)scorecardresearch\.com$/.test(host)) return "+proxy";
-        if (/(?:^|\.)google-analytics\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)googletagservices\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)d3hwh14livah35\.cloudfront\.net$/.test(host)) return "+proxy";
         if (/(?:^|\.)disqus\.com$/.test(host)) return "+proxy";
@@ -42,7 +58,6 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)github-atom-io-herokuapp-com\.freetls\.fastly\.net$/.test(host)) return "+proxy";
         if (/(?:^|\.)omnigroup\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)wireshark\.org$/.test(host)) return "+proxy";
-        if (/(?:^|\.)google\.com\.au$/.test(host)) return "+proxy";
         if (/(?:^|\.)getpostman\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)docker\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)pomodoneapp\.com$/.test(host)) return "+proxy";
@@ -98,6 +113,8 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)twitter\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)twimg\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)atom\.io$/.test(host)) return "+proxy";
+        if (/(?:^|\.)packagecontrol\.io$/.test(host)) return "+proxy";
+        if (/^packagecontrol\.io$/.test(host)) return "+proxy";
         return "+__ruleListOf_auto switch";
     },
     "+__ruleListOf_auto switch": function(url, host, scheme) {
@@ -7200,6 +7217,6 @@ var FindProxyForURL = function(init, profiles) {
     "+proxy": function(url, host, scheme) {
         "use strict";
         if (/^127\.0\.0\.1$/.test(host) || /^::1$/.test(host) || /^localhost$/.test(host)) return "DIRECT";
-        return "SOCKS5 127.0.0.1:7070; SOCKS 127.0.0.1:7070";
+        return "SOCKS5 172.30.8.1:7070; SOCKS 172.30.8.1:7070";
     }
 });
