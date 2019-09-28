@@ -11,6 +11,7 @@ var FindProxyForURL = function(init, profiles) {
 }("+auto switch", {
     "+auto switch": function(url, host, scheme) {
         "use strict";
+        if (/^translate\.google\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)google\.com$/.test(host)) return "+proxy";
         if (/(?:^|\.)google\.com\.au$/.test(host)) return "+proxy";
         if (/(?:^|\.)google-analytics\.com$/.test(host)) return "+proxy";
